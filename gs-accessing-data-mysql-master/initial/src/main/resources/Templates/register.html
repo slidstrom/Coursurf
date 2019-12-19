@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sign Up</title>
+</head>
+    <body class="loginRegisterBody">
+	<header id="titleBar">
+    <nav>
+      <div class="navigationLeft">
+      <a href="login.html" id="hometwo" name="submit">Coursurf</a>
+            <a href="login.html" id = "loginthree" name = "submit">Login</a>
+
+            <a href="register.html" id="registerthree" name="submit">Register</a>
+        </div>
+        <div class="navigationRight">
+          <a href="login.html" id="logouttwo" name="submit">Logout</a>
+        </div>
+    </nav>
+	</header>
+    <div class="loginRegisterContainer">
+        <main class="loginRegister">
+            <h1>Sign Up</h1>
+            <form class="loginRegisterForm" action="submit">
+                <input id="username" name="username" type="text" placeholder="Username" autofocus="autofocus" required>
+				<select id="role" name="role" onchange="this.setAttribute('changed', true)">
+					<option value="" disabled selected>I'm using CourseSurfer as a...</option>
+					<option value="student">Student</option>
+					<option value="teacher">Teacher</option>
+					<option value="administrator">Administrator</option>
+				</select>
+                <input id="password" name="password" type="password" placeholder="Password" required>
+          			<input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password" required>
+                <button id="login" type="submit">Sign Up</button>
+                <a href="login.html">Login</a>
+            </form>
+        </main>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,364 @@
+/* GLOBAL STYLE */
+
+body {
+	/* VARIABLES */
+	--highlight: white;
+	--text: black;
+	--borderColor: #ced4da;
+	--background: lightgray;
+	--button: lightgray;
+	--height: 32px;
+	--margin: 20px;
+	--padding: 40px;
+	--accent: black;
+	--shadow: rgba(0, 0, 0, 0.25);
+	--borderRadius: 5px;
+	/*--buttonBackground: linear-gradient( var(--highlight), var(--background) );*/
+	--buttonBackground: #343a40;
+	--buttonColor: white;
+	--border: solid var(--borderColor) 1px;
+	/* FONT */
+	font-family: "Helvetica Neue", "Segoe UI", "Arial", sans-serif;
+	font-size: 12pt;
+	/* COLOR */
+	background: white;
+	/* LAYOUT */
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	/* COLORS */
+	background: #e9ecef;
+	/* LAYOUT */
+	padding: var(--padding);
+	margin: var(--margin);
+	border-radius: var(--borderRadius);
+}
+
+#titleBar {
+	/* COLORS */
+	color: var(--buttonColor);
+	background: #343a40;
+	box-shadow: 0 1px var(--accent);
+	/* LAYOUT */
+	box-sizing: border-box;
+	height: 50px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+nav {
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+
+.navigationLeft, .navigationRight {
+	display: flex;
+}
+
+.navigationLeft {
+	flex: 1;
+}
+
+nav a {
+	/* FONT */
+	font-weight: normal;
+	/* COLORS */
+	color: var(--buttonColor);
+	text-decoration: none;
+	/* LAYOUT */
+	/*border-left: solid var(--borderColor) 1px;*/
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 var(--padding);
+}
+
+nav a:last-child {
+	/*border-right: solid var(--borderColor) 1px;*/
+}
+
+/* HOME */
+
+#homeBody {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+#heroContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	justify-content: center;
+}
+
+.hero {
+	text-align: center;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+#campaign {
+	background-color: rgba(0,0,0,0.1);
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+}
+
+.hero h1 {
+	font-size: 36pt;
+	font-weight: bold;
+	padding: var(--padding);
+	padding-bottom: 0;
+}
+
+.hero h2 {
+	font-size: 22pt;
+	padding: var(--padding);
+	padding-top: 0;
+}
+
+.heroButton {
+	margin: var(--margin);
+	padding: 25px 50px;
+	background: var(--buttonBackground);
+	border: var(--border);
+	border-radius: var(--borderRadius);
+	text-decoration: none;
+	color: var(--buttonColor);
+}
+
+
+/* LOGIN */
+
+.loginRegisterBody {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+	height: 100vh;
+}
+
+.loginRegisterContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	flex: 1;
+}
+
+.loginRegister {
+	width: 40%;
+}
+
+.loginRegisterForm {
+	display: flex;
+	flex-direction: column;
+}
+
+/* MY COURSES */
+
+#courseTemplate {
+	display: none;
+}
+
+.subjectHeader {
+	/* COLORS */
+	background: var(--buttonBackground);
+	border-bottom: none;
+	color: white;
+	/* LAYOUT */
+	border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+	padding: 20px var(--padding);
+	margin: 0;
+}
+
+.subjectContainer {
+	display: flex;
+	flex-direction: row;
+	border-top: none;
+	border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+	padding: var(--padding);
+	margin-bottom: var(--margin);
+	box-shadow: 0 1px 5px var(--shadow) inset;
+}
+
+.subjectContainer a {
+	text-decoration: none;
+}
+
+.course {
+	padding: var(--padding);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 200px;
+	margin-right: var(--margin);
+	border-radius: var(--borderRadius);
+	/* COLORS */
+	color: black;
+	border: rgba(0,0,0,0.25) solid 1px;
+}
+
+.courseTitle {
+	font-weight: bold;
+}
+
+.courseNewAssignments, .grade {
+	/*font-style: italic;*/
+	color: rgba(0,0,0,.75);
+}
+
+
+/* COURSE PAGE */
+
+#moduleTemplate {
+	display: none;
+}
+
+#courseHeader {
+	display: flex;
+	margin-bottom: var(--margin);
+}
+
+#courseName {
+	flex: 1;
+}
+
+#gradesButton {
+	background: var(--buttonBackground);
+	color: var(--buttonColor);
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--borderRadius);
+	text-decoration: none;
+}
+
+.unitHeader {
+	/* COLORS */
+	border: var(--borderColor) 1px solid;
+	border-bottom: none;
+	background: var(--buttonBackground);
+	color: var(--buttonColor);
+	/* LAYOUT */
+	border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+	padding: 20px var(--padding);
+	margin: 0;
+}
+
+.unit {
+	display: flex;
+	flex-direction: column;
+	border: solid var(--borderColor) 1px;
+	border-top: none;
+	border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+	padding: var(--padding);
+	margin-bottom: var(--margin);
+	box-shadow: 0 1px 5px var(--shadow) inset;
+}
+
+.module {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: var(--margin);
+	padding-bottom: var(--margin);
+	border-bottom: var(--borderColor) 1px solid;
+}
+
+.module:nth-child(odd) {
+	
+}
+
+.module:last-child {
+	margin-bottom: 0;
+}
+
+.moduleName {
+	flex: 1;
+}
+
+/* WIDGETS */
+
+input[type=text], input[type=password], select {
+	background: white;
+	border: solid 1px;
+	border-radius: var(--borderRadius);
+	border-color: var(--borderColor);
+	padding: 5px 20px;
+	/*box-shadow: 0 1px 5px rgba(0,0,0,0.1) inset;*/
+	margin-bottom: var(--margin);
+	height: var(--height);
+	box-sizing: content-box;
+}
+
+input[type=text]:focus, input[type=password]:focus, select:focus {
+	outline: none;
+	border-color: #80bdff;
+	box-shadow: 0 0 0 4px rgba(0,123,255,.25);
+}
+
+label {
+	margin-bottom: var(--margin);
+}
+
+input::placeholder, select {
+	/*font-style: italic;*/
+	color: gray;
+}
+
+select[changed=true] {
+	font-style: normal;
+	color: black;
+}
+
+option {
+	color: black;
+	font-style: normal;
+}
+
+input[type=submit] {
+	background: linear-gradient();
+}
+
+button {
+	/* COLORS */
+	color: var(--buttonColor);
+	background: var(--button);
+	background: var(--buttonBackground);
+	/* LAYOUT */
+	padding: 5px 20px;
+	box-sizing: content-box;
+	height: var(--height);
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--borderRadius);
+	margin-bottom: var(--margin);
+}
+
+button:active {
+	box-shadow: 0 1px 5px var(--shadow) inset;
+}
+
+/* HEADINGS */
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 0;
+	margin-bottom: var(--margin);
+}

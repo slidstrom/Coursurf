@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"
+      xmlns="http://w3.org/1999/xhtml" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css" th:href="@{public/css/style.css}">
+    <title>Login</title>
+</head>
+<body class="loginRegisterBody">
+	<header id="titleBar">
+    <nav>
+      <div class="navigationLeft">
+      <a href="#" id="home" name="submit">Coursurf</a>
+            <a href="#">Login</a>
+            <a href="register.html" id="registertwo" name="submit">Register</a>
+        </div>
+        <div class="navigationRight">
+          <a href="login.html" id="logout" name="submit">Logout</a>
+        </div>
+    </nav>
+	</header>
+    <div class="loginRegisterContainer">
+        <main class="loginRegister">
+            <h1>Login</h1>
+
+
+
+            <form th:action="@{/login.html}" class="loginRegisterForm" method="post">
+                <input id="username" name="username" type="text" placeholder="Username" autofocus="autofocus" required>
+                <input id="password" name="password" type="password" placeholder="Password" required>
+                <label for="rememberMe">
+                    <input id="rememberMe" type="checkbox">
+                    <span>Remember me</span>
+                </label>
+                <button id="login" type="submit" href="register.html">Log In</button>
+                <a href="register.html" id="cancel" name="cancel">Register</a>
+                </button>
+                </input>
+                <a id="forgotPassword" href="#">Forgot password?</a>
+            </form>
+        </main>
+    </div>
+    </body>
+</html>
